@@ -1,9 +1,11 @@
-/home/crane/.netrc
-/home/crane/#.netrc#
-/home/crane/.emacs.d/readme.txt
-/home/crane/.emacs.d/#readme.txt#
 /home/crane/.emacs.d/mode-line-awesome.el
 /home/crane/.emacs.d/#mode-line-awesome.el#
+/home/crane/.emacs.d/readme.txt
+/home/crane/.emacs.d/#readme.txt#
+/home/crane/.emacs.d/README.org
+/home/crane/.emacs.d/#README.org#
+/home/crane/.netrc
+/home/crane/#.netrc#
 /home/crane/.emacs.d/init.el
 /home/crane/.emacs.d/#init.el#
 /home/crane/.emacs.d/init-emacs-w3m.el

@@ -1,128 +1,128 @@
-g++ justtest.cpp -o justtest.out
-./just
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
-g++ justtest.cpp -o justtest.out
-./justtest.out 
 ls
-g++ ArgsInMain.cpp -o ArgsInMain.out
-./ArgsInMain.out
-./ArgsInMain.out crane love nanan
-g++ ConstMethod.cpp -o ConstMethod.out
-./ConstMethod.out 
-g++ ConstMethod.cpp -o ConstMethod.out
-g++ ConstMethod.cpp -o ConstMethod.out
-./ConstMethod.out 
-g++ ConstMethod.cpp -o ConstMethod.out
+cd java
 ls
-cd
+cd ..
 ls
-ls -al
-q
+cd java
 ls
-ant
-android
+cd 
 ls
-touch .emacs
+cd /etc/java-7-openjdk/
 ls
-ls -al
-ant debug
+cd /usr/share/java/
 ls
-rm -rm .emacs
-rm -rf .emacs
+cd codes/javacodes/
 ls
-ls -al
-android list avd
-emulator -avd crane
-adb devices
-create avd
-android create avd
-android create avd -n crane -t 17
-android list targets
-android create avd -n crane -t 5
-android 
-python goagent/goagent-73e27668c14c/local/proxy.py 
+. linuxC.sh 
+. linuxC.sh 
+. linuxC.sh 
+;s
+;s
 ls
-./firstshell.sh 
-which perl
-ls
-./helloworld.sh 
-rm 
-rm #nan.jpg#
-ls
-which sh
-sh -v
-ls
-ls -l network.sh 
-ls -al network.sh 
-ls
-bash one.sh 
-. one.sh 
-ls
-cd
-ls
-ls .authinfo.gpg 
-rm -rf .authinfo.gpg 
+. linuxC.sh 
 ls
 ls
-. helloworld.sh 
 ls
-. one.sh 
-. one.sh 
-. exeone.sh 
+echo $JAVA_HOME
+cd /usr/lib/jvm/java-1.7.0-openjdk-amd64
 ls
-cd /etc/init.d
+cd include/
 ls
 pwd
+ls
 cd
-typwe
-type
-set
-env
+cd codes/javacodes/
+ls
+. linuxC.sh 
+. linuxC.sh 
+. linuxC.sh 
+. linuxC.sh 
+ls
+. linuxC.sh 
+ls
+. linuxC.sh 
+ls
+emacs 
+ls
+ls
+cd codes/javacodes/
+ls
+. linuxC.sh 
+. linuxC.sh 
+. linuxC.sh 
+ls
+pwd
+gcc
+gcc cimplOne.c -o cimplOne.out
+gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
+gcc -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linux-shared cimplOne.c -o libNativaLib.so
+gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
+gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
 ls
 cd ..
 ls
+cd c-code/
 ls
-rm -rf ecb-2.40/
+gcc -o share -O2 share.c 
 ls
-ls
-rm -rf ecb-snapshot-20120830/
-ls
-cd .emacs.d/
-ls
-ant
-ant --help
-ls
-cd
-cd android-pro/
-ls
-cd gen/
-ls
-cd com/crane/hello/
-ls
-cd -
-ls
-cd
-cd android-pro/
-ls
-cd HelloWorld/
+ls -l share
+ldd share
+nm share 
+ls -l share
+strip share
+ls -l share
+nm share 
+strings share
 ls
 cd ..
 ls
-cd src/com/crane/hello/
-lx
+cd javacodes/
+ls
+gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -o libNativeLib.so -O2 -fPIC -shared cimplOne.c 
+ls
+g++ -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linuxg++ -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linux\X
+ls
+. linuxC.sh 
+ls
+java NativeTest
+. linuxC.sh 
+java NativeTest
+. linuxC.sh 
+java NativeTest
+ls
+cd ..
+ls
+cd ~/CodeLife/
+ls
+mkdir gcc
+ls
+cd gcc
+ls
+touch shareLib
+ls
+emacs shareLib 
 ls
 ls
-ls -al
+javac OSInfo.java 
+java OSInfo
+cd ..
+ls
+cd ~/CodeLife/
+ls
+mkdir java
+ls
+cd ja
+cd java/
+touch getTheOSInfoInJava
+ls
+pwd
+cd ~/codes/javacodes/
+ls
+ls
+javac Compute.java 
+javah --help
+javah Compute.class
+javah Compute
+ls
+touch Compute.c
 ls

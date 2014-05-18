@@ -226,3 +226,24 @@
 (setq java-mode-hook
     (function (lambda()
        (java-mode-indent-annotations-setup))))
+
+
+;;delete the whole line using C-k wherever the cursor is!!!
+(defun my-kill-whole-line()
+  (interactive) ;;这个是命令必须要调用一个函数，表示我是一个命令，而不仅仅是普通的函数
+  (beginning-of-line)  ;; 跳到行首，，默认C-a 绑定的函数
+  (kill-line)  ;;这个是删除光标到行末之间内容的函数，默认绑定为C-k
+  )
+
+(global-set-key (kbd "C-k") 'my-kill-whole-line)  ;;这个将my-kill-whole-line重新绑定到C-k上
+
+;;; **************************************************************************
+;;; ***** built-in functions
+;;; **************************************************************************
+(defun eshell/clear () ;;clear可换其他名称
+  "Clears the shell buffer ala Unix's clear or DOS' cls"
+  (interactive)
+  ;; the shell prompts are read-only, so clear that for the duration
+  (let ((inhibit-read-only t))
+	;; simply delete the region
+	(delete-region (point-min) (point-max))))

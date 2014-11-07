@@ -1,128 +1,128 @@
 ls
-cd java
+cd hello/
+ls
+autoscan
+autoscan
+ls
+mv configure.scan configure.in
+ls
+ls
+aclocal
+ls
+autoconf
+ls
+./configure 
+ls
+automake
+automake --add-missing
+ls
+./config.status
+./configure 
+ls
+ls
+ls
+ls
+java
+javadoc
+javadoc FirstJava
+javadoc Hello.class
+ls
+pwd
+javadoc -private -d doc -author -version FirstJava.java
+ls
+cd doc/
+ls
+ls
+javac HeapOOM.java
+javac HeapOOM.java 
+javac HeapOOM.java 
 ls
 cd ..
 ls
-cd java
+ls -al
+cd .emacs.d/
 ls
-cd 
+git
+git push
 ls
-cd /etc/java-7-openjdk/
+g++ -o TestOne.out TestOne.cpp 
+g++ -o TestOne.out TestOne.cpp 
 ls
-cd /usr/share/java/
+./TestOne.out 
+g++ -o TestOne.out TestOne.cpp 
+./TestOne.out 
 ls
-cd codes/javacodes/
+gcc -o hash.out hash.c 
 ls
-. linuxC.sh 
-. linuxC.sh 
-. linuxC.sh 
-;s
-;s
+./hash.out 
+./hash.out CRANE NAN
+ls -al hash.out
+./hash.out crane cnann 
+./hash.out crane
 ls
-. linuxC.sh 
+./hash.out
+./MyClass.out 
 ls
+cd mypoint/
 ls
+g++ -o tpoint1.out tpoint1.cpp 
 ls
-echo $JAVA_HOME
-cd /usr/lib/jvm/java-1.7.0-openjdk-amd64
-ls
-cd include/
-ls
+g++ -o tpoint1.out tpoint1.cpp 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
 pwd
+./tpoint1.out 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+g++ -o tpoint1.out tpoint1.cpp 
+g++ -o tpoint1.out tpoint1.cpp 
+./tpoint1.out 
+ls
+rm -rf #fork#
+ls
+ls
+g++ -o virtualbase.out virtualcon.cpp
+g++ -o virtualbase.out virtualcon.cpp
+g++ -o virtualbase.out virtualcon.cpp
+g++ -o virtualbase.out virtualcon.cpp
+g++ -o virtualbase.out VirtualBase.cpp 
+./virtualbase.out
+g++ -o virtualbase.out VirtualBase.cpp 
+g++ -o virtualbase.out VirtualBase.cpp 
+g++ -o virtualbase.out VirtualBase.cpp 
+./virtualbase.out
+ls
+javac Generics.java 
+javac Generics.java 
+javac Generics.java 
+java Generics
+java Generics
+javac Generics.class
+javac Generics.java 
+java Generics
+ls
+chmod 755 lein 
+ls
+./lein 
 ls
 cd
-cd codes/javacodes/
 ls
-. linuxC.sh 
-. linuxC.sh 
-. linuxC.sh 
-. linuxC.sh 
+cd .lein/
 ls
-. linuxC.sh 
-ls
-. linuxC.sh 
-ls
-emacs 
+cd self-installs/
 ls
 ls
-cd codes/javacodes/
-ls
-. linuxC.sh 
-. linuxC.sh 
-. linuxC.sh 
-ls
-pwd
-gcc
-gcc cimplOne.c -o cimplOne.out
-gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
-gcc -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linux-shared cimplOne.c -o libNativaLib.so
-gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
-gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux cimplOne.c -o cimplOne.out
-ls
-cd ..
-ls
-cd c-code/
-ls
-gcc -o share -O2 share.c 
-ls
-ls -l share
-ldd share
-nm share 
-ls -l share
-strip share
-ls -l share
-nm share 
-strings share
-ls
-cd ..
-ls
-cd javacodes/
-ls
-gcc -I$JAVA_HOME/include -I$JAVA_HOME/include/linux -o libNativeLib.so -O2 -fPIC -shared cimplOne.c 
-ls
-g++ -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linuxg++ -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/linux\X
-ls
-. linuxC.sh 
-ls
-java NativeTest
-. linuxC.sh 
-java NativeTest
-. linuxC.sh 
-java NativeTest
-ls
-cd ..
-ls
-cd ~/CodeLife/
-ls
-mkdir gcc
-ls
-cd gcc
-ls
-touch shareLib
-ls
-emacs shareLib 
+cd
 ls
 ls
-javac OSInfo.java 
-java OSInfo
-cd ..
-ls
-cd ~/CodeLife/
-ls
-mkdir java
-ls
-cd ja
-cd java/
-touch getTheOSInfoInJava
-ls
-pwd
-cd ~/codes/javacodes/
-ls
-ls
-javac Compute.java 
-javah --help
-javah Compute.class
-javah Compute
-ls
-touch Compute.c
-ls
+lein help tutorial

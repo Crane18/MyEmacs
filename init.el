@@ -223,11 +223,29 @@
 (require 'android-mode)
 (require 'java-mode-indent-annotations)
 
+(global-set-key (kbd "M-5") 'iwb) ;;格式化整个文件
+(defun iwb ()
+	"indent whole buffer"
+	(interactive)
+	(delete-trailing-whitespace)
+	(indent-region (point-min) (point-max) nil))
 (setq java-mode-hook
     (function (lambda()
        (java-mode-indent-annotations-setup))))
 
-
+(add-hook 'c-mode-hook 'linux-c-mode)	;;C/C++
+(add-hook 'c++-mode-hook 'linux-cpp-mode)
+(defun linux-c-mode()
+  (define-key c-mode-map [return] 'newline-and-indent)
+  (setq c-basic-offset 4)
+  (which-function-mode)
+)
+(defun linux-cpp-mode()
+  (define-key c++-mode-map [return] 'newline-and-indent)
+  (interactive)
+  (setq c-basic-offset 4)
+  (which-function-mode)
+)
 ;;delete the whole line using C-k wherever the cursor is!!!
 (defun my-kill-whole-line()
   (interactive) ;;这个是命令必须要调用一个函数，表示我是一个命令，而不仅仅是普通的函数

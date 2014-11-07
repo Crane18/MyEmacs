@@ -1,11 +1,4 @@
 ls
-cd hello/
-ls
-autoscan
-autoscan
-ls
-mv configure.scan configure.in
-ls
 ls
 aclocal
 ls
@@ -126,3 +119,10 @@ cd
 ls
 ls
 lein help tutorial
+ls
+pwd
+cd
+ls
+cd .emacs.d/
+ls
+git log

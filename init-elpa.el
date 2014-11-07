@@ -80,6 +80,7 @@ ARCHIVE is the string name of the package archive.")
 
 (defvar melpa-include-packages
   '(bbdb
+    async
     lua-mode
     emms
     pomodoro

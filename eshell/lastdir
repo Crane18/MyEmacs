@@ -1,5 +1,3 @@
-/home/crane/codes/javacodes/Contructor
-/home/crane/codes/shellscript
 /home/crane/Downloads
 /media/crane/新加卷
 /media/crane/新加卷/MySQL
@@ -26,8 +24,9 @@
 /home/crane/codes/c-code
 /home/crane/codes/javacodes
 /home/crane/bin
-/home/crane
 /home/crane/.lein
 /home/crane/.lein/self-installs
-/home/crane
 /home/crane/command-line-args
+/home/crane/command-line-args/src/command_line_args
+/home/crane
+/home/crane/.emacs.d

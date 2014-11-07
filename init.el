@@ -186,7 +186,7 @@
 
 ;;android mode
 (require 'android-mode)
-(setq android-mode-sdk-dir "~/AndroidSDK/android-sdk-linux/")
+(setq android-mode-sdk-dir "~/androidsdk")
 
 (defun fullscreen ()
 (interactive)
@@ -219,7 +219,7 @@
 ;;To fix this, you need a minor mode called java-mode-indent-annotations.el <- click on the Download
 ;;link on that page and save the file as ~/.emacs.d/java-mode-indent-annotations.el
 
-(setq android-mode-sdk-dir "~/AndroidSDK/android-sdk-linux/")
+(setq android-mode-sdk-dir "~/androidsdk/")
 (require 'android-mode)
 (require 'java-mode-indent-annotations)
 

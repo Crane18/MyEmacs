@@ -185,8 +185,8 @@
 (global-set-key [f11] 'my-fullscreen)
 
 ;;android mode
-(require 'android-mode)
-(setq android-mode-sdk-dir "~/androidsdk")
+;;(require 'android-mode)
+;;(setq android-mode-sdk-dir "~/androidsdk")
 
 (defun fullscreen ()
 (interactive)
@@ -213,15 +213,17 @@
 )
 (global-set-key [remap comment-or-uncomment-region] 'my-comment-or-uncomment-region)
 
+;; To use company-mode in all buffers,
+;; (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Because Java for Android uses Java 1.5 or above, it will be full of annotations such as “@Override”.
 ;;The C/Java modes for emacs don’t appear to have been updated to support this syntax so indentation won’t be quite right.
 ;;To fix this, you need a minor mode called java-mode-indent-annotations.el <- click on the Download
 ;;link on that page and save the file as ~/.emacs.d/java-mode-indent-annotations.el
 
-(setq android-mode-sdk-dir "~/androidsdk/")
-(require 'android-mode)
-(require 'java-mode-indent-annotations)
+;;(setq android-mode-sdk-dir "~/androidsdk/")
+;;(require 'android-mode)
+;;(require 'java-mode-indent-annotations)
 
 (global-set-key (kbd "M-5") 'iwb) ;;格式化整个文件
 (defun iwb ()
@@ -268,56 +270,61 @@
 
 ;; clojure-mode
 (global-set-key [f9] 'cider-jack-in)
-(add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
-;; (add-hook 'clojure-mode-hook 'subword-mode)
-;; (add-hook 'clojure-mode-hook 'company-mode)
+;; (add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'clojure-mode-hook 'subword-mode)
+(add-hook 'clojure-mode-hook 'company-mode)
+(add-hook 'clojure-mode-hook 'smartparens-strict-mode)
+(add-hook 'cojure-mode-hook 'rainbow-delimiters-mode)
 
 ;; Auto complete
-(require 'auto-complete-config)
-;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(setq ac-delay 0.0)
-;(setq ac-use-quick-help t)
-(setq ac-quick-help-delay 0.5)
-;(setq ac-use-fuzzy 1)
-;(setq ac-auto-start 1)
-;(setq ac-auto-show-menu 1)
-(ac-config-default)
-
-(require 'ac-cider)
-(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-(add-hook 'cider-mode-hook 'ac-cider-setup)
-(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-(eval-after-load "auto-complete"
-    '(add-to-list 'ac-modes 'cider-mode))
-(add-to-list 'ac-modes 'cider-repl-mode)
-
-(defun set-auto-complete-as-completion-at-point-function ()
-  (setq completion-at-point-functions '(auto-complete)))
-(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (require 'auto-complete-config)
+;; ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;; (setq ac-delay 0.0)
+;; ;(setq ac-use-quick-help t)
+;; (setq ac-quick-help-delay 0.5)
+;; ;(setq ac-use-fuzzy 1)
+;; ;(setq ac-auto-start 1)
+;; ;(setq ac-auto-show-menu 1)
+;; (ac-config-default)
+;; (setq ac-use-menu-map t)
+;; ;; Default settings
+;; (define-key ac-menu-map "\C-n" 'ac-next)
+;; (define-key ac-menu-map "\C-p" 'ac-previous)
 
 
-(defun remove-dos-eol ()
-  "Do not show ^M in files containing mixed UNIX and DOS line endings."
-  (interactive)
-  (setq buffer-display-table (make-display-table))
-  (aset buffer-display-table ?\^M []))
+;; cider-mode
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'company-mode)
+(add-hook 'cider-mode-hook 'smartparens-strict-mode)
+(add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook 'company-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 
-(add-hook 'cider-repl-mode-hook 'remove-dos-eol)
+;; (defun set-auto-complete-as-completion-at-point-function ()
+;;   (setq completion-at-point-functions '(auto-complete)))
+;; (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;; (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
-(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
-;; (add-hook 'cider-repl-mode-hook 'smartparens-strict-mode)
-;; (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-;; (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
-;; (add-hook 'cider-repl-mode-hook 'subword-mode)
+;; (defun remove-dos-eol ()
+;;   "Do not show ^M in files containing mixed UNIX and DOS line endings."
+;;   (interactive)
+;;   (setq buffer-display-table (make-display-table))
+;;   (aset buffer-display-table ?\^M []))
+
+;; (add-hook 'cider-repl-mode-hook 'remove-dos-eol)
 
 ;; Change the result prefix for REPL evaluation (by default there's no prefix):
 (setq cider-interactive-eval-result-prefix ";; => ")
 ;; Change the result prefix for REPL evaluation (by default there's no prefix):
 (setq cider-repl-result-prefix ";= ")
-;; (setq cider-show-error-buffer nil)
+;; (setq cider-repl-tab-command 'indent-for-tab-command)
+;; To prefer local resources to remote (tramp) ones when both are available:
+(setq cider-prefer-local-resources t)
+;; Prevent the auto-display of the REPL buffer in a separate window after connection is established:
+(setq cider-repl-pop-to-buffer-on-connect nil)
+(setq cider-show-error-buffer nil)
+(setq cider-auto-select-error-buffer nil)
 ;; (setq cider-stacktrace-fill-column 80)
 ;; (setq nrepl-buffer-name-show-port t)
 ;; Make C-c C-z switch to the CIDER REPL buffer in the current window:

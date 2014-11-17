@@ -1,26 +1,3 @@
-ls
-ls
-aclocal
-ls
-autoconf
-ls
-./configure 
-ls
-automake
-automake --add-missing
-ls
-./config.status
-./configure 
-ls
-ls
-ls
-ls
-java
-javadoc
-javadoc FirstJava
-javadoc Hello.class
-ls
-pwd
 javadoc -private -d doc -author -version FirstJava.java
 ls
 cd doc/
@@ -126,3 +103,26 @@ ls
 cd .emacs.d/
 ls
 git log
+ls
+cd 
+pwd
+cd .emacs.d/ 
+ls
+cd elpa/
+cd archives/
+ls
+rm -rf melpa-stable/ 
+ls
+ls
+cd elpa/ 
+cd archives/
+ls
+rm -rf melpa-stable/ 
+ls
+ls
+cd elpa/archives/
+ls
+rm -rf melpa-stable/ 
+ls
+ls
+lein deps

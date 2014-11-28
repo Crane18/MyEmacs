@@ -135,6 +135,7 @@
 (require 'init-stripe-buffer)
 (require 'init-elnode)
 (require 'mode-line-awesome)
+(require 'rainbow-delimiters)
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
@@ -164,17 +165,31 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-last-as-first-bookmark-file "~/.emacs.bmk")
- '(safe-local-variable-values (quote ((emacs-lisp-docstring-fill-column . 75) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby")))))
+ '(safe-local-variable-values (quote ((emacs-lisp-docstring-fill-column . 75) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby"))))
+ '(session-use-package t nil (session)))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "spring green"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "orange red"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "chartreuse"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "cyan"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "dark violet"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "dark khaki"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "rosy brown"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "magenta"))))
  '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; End:
-(put 'erase-buffer 'disabled nil)
+(put 'erase-buffer 'disabled nil
+     )
+;;给所有的编程语言设置rainbow-mode
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;;该函数用于全屏，状态值为2说明全屏后可以还原
 (defun my-fullscreen ()
@@ -274,7 +289,7 @@
 (add-hook 'clojure-mode-hook 'subword-mode)
 (add-hook 'clojure-mode-hook 'company-mode)
 (add-hook 'clojure-mode-hook 'smartparens-strict-mode)
-(add-hook 'cojure-mode-hook 'rainbow-delimiters-mode)
+;; (add-hook 'cojure-mode-hook 'rainbow-delimiters-mode)
 
 ;; Auto complete
 ;; (require 'auto-complete-config)
@@ -299,7 +314,7 @@
 (add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-repl-mode-hook 'company-mode)
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
-
+(add-hook 'cider-repl-mode-hook 'smartparens-mode)
 ;; (defun set-auto-complete-as-completion-at-point-function ()
 ;;   (setq completion-at-point-functions '(auto-complete)))
 ;; (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
@@ -322,10 +337,31 @@
 ;; To prefer local resources to remote (tramp) ones when both are available:
 (setq cider-prefer-local-resources t)
 ;; Prevent the auto-display of the REPL buffer in a separate window after connection is established:
-(setq cider-repl-pop-to-buffer-on-connect nil)
+;; (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-show-error-buffer nil)
 (setq cider-auto-select-error-buffer nil)
+(setq nrepl-buffer-name-show-port t)
 ;; (setq cider-stacktrace-fill-column 80)
 ;; (setq nrepl-buffer-name-show-port t)
 ;; Make C-c C-z switch to the CIDER REPL buffer in the current window:
 ;; (setq cider-repl-display-in-current-window t)
+
+
+;;fill-column-indicator
+;; (require 'fill-column-indicator)
+;; (setq-default fci-rule-column 80)
+;; (setq fci-handle-truncate-lines nil)
+;; (setq fci-rule-width 1)
+;; (setq fci-rule-color "darkblue")
+;; (setq fci-rule-use-dashes 0.75)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; ;; (global-fci-mode 1)
+;; (defun auto-fci-mode (&optional unused)
+;;     (if (> (window-width) fci-rule-column)
+;;         (fci-mode 1)
+;;       (fci-mode 0))
+;;     )
+;; (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+;; (add-hook 'window-configuration-change-hook 'auto-fci-mode)
+;; (add-hook 'clojure-mode-hook 'auto-fci-mode)
+;; (add-hook 'cider-mode-hook 'auto-fci-mode)
